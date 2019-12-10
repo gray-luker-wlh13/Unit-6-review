@@ -30,6 +30,7 @@ app.get('/auth/user', authCtrl.getUser);
 
 // ctrl endpoints
 app.get('/api/posts/:id', ctrl.getPosts);
+app.post('/api/posts/:id', ctrl.addPosts);
 
 const port = SERVER_PORT;
 app.listen(port, () => console.log(`Server running on ${port}`));
