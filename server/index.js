@@ -3,6 +3,7 @@ const express = require('express'),
       session = require('express-session'),
       massive = require('massive'),
       authCtrl = require('./authController'),
+      ctrl = require('./controller'),
       {SERVER_PORT, CONNECTION_STRING, SESSION_SECRET} = process.env,
       app = express();
     
@@ -28,7 +29,7 @@ app.post('/auth/logout', authCtrl.logout);
 app.get('/auth/user', authCtrl.getUser);
 
 // ctrl endpoints
-
+app.get('/api/posts/:id', ctrl.getPosts);
 
 const port = SERVER_PORT;
 app.listen(port, () => console.log(`Server running on ${port}`));

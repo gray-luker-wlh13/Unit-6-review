@@ -10,6 +10,6 @@ export default (
         <Route exact path='/' component={Landing}/>
         <Route path='/register' component={Register}/>
         <Route path='/dash' component={Dashboard}/>
-        <Route path='/profile/:id' component={Profile}/>
+        <Route path='/profile' component={Profile}/>
     </Switch>
 );

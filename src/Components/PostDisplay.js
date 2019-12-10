@@ -1,9 +1,9 @@
 import React from 'react';
 
-const PostDisplay = () => {
+const PostDisplay = (props) => {
     return (
         <div>
-            PostDisplay Component
+           <img src={props.post.image_url} alt='user post' style={{width: '150px'}}/>
         </div>
     )
 }
